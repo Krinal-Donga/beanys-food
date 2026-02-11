@@ -1,0 +1,157 @@
+.custom-navbar {
+  height: 70px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* FULL WIDTH INNER WRAPPER */
+.navbar-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  position: relative;
+}
+
+/* LEFT MENU */
+.nav-left {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-left .nav-link {
+  font-weight: 600;
+  font-size: 13px;
+  color: #044b35 !important;
+  white-space: nowrap;
+  text-decoration: none;
+  position: relative;
+}
+
+/* underline animation */
+.nav-left .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #044b35;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-left .nav-link:hover::after {
+  width: 100%;
+}
+
+/* CENTER LOGO (DESKTOP ONLY) */
+.nav-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-logo img {
+  width: 90px;
+}
+
+/* RIGHT ICONS */
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* CART */
+.cart-icon {
+  position: relative;
+}
+
+.cart-icon span {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #0a6b3c;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* ============================= */
+/* 🔥 TABLET & MOBILE FIX */
+/* ============================= */
+@media (max-width: 991px) {
+
+  .custom-navbar {
+    height: auto;
+    border-radius: 0;
+  }
+
+  .navbar-inner {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+
+  /* ✅ LOGO FIX — absolute hata diya */
+  .nav-logo {
+    position: static;        /* 🔥 MOST IMPORTANT */
+    transform: none;
+    margin: 0 auto;
+    order: 2;                /* center me rahe */
+  }
+
+  /* Toggle left */
+  .navbar-toggler {
+    order: 1;
+  }
+
+  /* Right icons */
+  .nav-right {
+    order: 3;
+    gap: 18px;
+  }
+
+  /* COLLAPSE MENU */
+  .nav-left {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .nav-left .nav-link {
+    font-size: 14px;
+  }
+}
+
+/* ============================= */
+/* 🔥 SMALL MOBILE */
+/* ============================= */
+@media (max-width: 576px) {
+
+  .nav-logo img {
+    width: 70px;
+  }
+
+  .nav-right {
+    gap: 14px;
+  }
+
+  .nav-right i {
+    font-size: 18px;
+  }
+
+  .cart-icon span {
+    font-size: 10px;
+    padding: 1px 5px;
+  }
+ 
+}

@@ -1,0 +1,717 @@
+/* ================================
+   GLOBAL
+================================ */
+
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.Homepage {
+  padding-top: 60px;
+}
+
+/* ================================
+   AFTER HERO SECTION
+================================ */
+.after-hero-section {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+
+.after-hero-section .main-title {
+  font-weight: 700;
+  color: #005c3d;
+  margin-bottom: 10px;
+}
+
+.after-hero-section .sub-title {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* ================================
+   COMMON BUTTON
+================================ */
+.beansybutton {
+  background-color: #005c3d;
+  color: #fff;
+  border: 2px solid #005c3d;
+  border-radius: 10px;
+  padding: 6px 14px;
+  transition: 0.3s ease;
+}
+
+.beansybutton:hover {
+  background-color: #fff;
+  color: #005c3d;
+}
+
+/* ================================
+   PRODUCT CARD
+================================ */
+.productbeansy-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #fff;
+}
+
+/* 3D IMAGE CONTAINER */
+.card-3d {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  perspective: 1200px;
+}
+
+/* IMAGE WRAPPER */
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* PRODUCT IMAGE */
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 3D HOVER EFFECT */
+.card-3d:hover .wrapper {
+  transform: rotateY(-10deg) rotateX(6deg) scale(1.04);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ================================
+   OVERLAY
+================================ */
+.hover-overlaybens {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 92, 61, 0.25);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.productbeansy-card:hover .hover-overlaybens {
+  opacity: 1;
+}
+
+/* ================================
+   EYE ICON
+================================ */
+.side-icons {
+  position: absolute;
+  top: 20px;
+  right: -60px;
+  display: flex;
+  transition: 0.4s ease;
+  z-index: 5;
+}
+
+.productbeansy-card:hover .side-icons {
+  right: 15px;
+}
+
+.side-icons i {
+  background: #fff;
+  color: #005c3d;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.side-icons i:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ================================
+   ADD TO CART
+================================ */
+.cart-btn {
+  position: absolute;
+  left: 50%;
+  bottom: -60px;
+  transform: translateX(-50%);
+  width: 80%;
+  background: #ffffff;
+  color: #000;
+  padding: 12px;
+  border-radius: 30px;
+  border: 1px solid #ffffff;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 6;
+}
+
+.productbeansy-card:hover .cart-btn,
+.productbeansy-card:active .cart-btn,
+.productbeansy-card:focus-within .cart-btn {
+  bottom: 20px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-btn:hover {
+  background: #07a16e;
+  color: #fff;
+  border: 1px solid #07a16e;
+
+}
+
+/* Left Image Section */
+.custmreview {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Left Image Section */
+.custmreview .image-box {
+  width: 200px;
+  height: 100%;
+  background-color: #005c3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.review-content{
+  margin-left: 15px;
+}
+
+/* Hover effect - black overlay with opacity */
+.custmreview .image-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(63, 81, 74);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;  /* overlay ko middle layer me rakho */
+}
+
+.custmreview .image-box:hover::after {
+  opacity: 0.5;
+}
+
+/* Image aur text dono ko overlay ke NEECHE rakho */
+.custmreview .image-box > * {
+  position: relative;
+  z-index: 0;
+}
+
+
+.banner {
+    background-color: #005c3d;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+/* Bootstrap row fix */
+.banner .row {
+    align-items: center;
+}
+
+/* Text section */
+.banner-content h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.banner-content .subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.banner .features {
+    padding-left: 20px;
+}
+
+.banner .features li {
+    font-size: 16px;
+    color: yellow;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+/* Image section */
+.banner-image {
+    text-align: center;
+}
+
+.banner-image img {
+    width: 650px;
+    /* max-width: 500px; */
+    height: auto;
+}
+
+/* ===============================
+   HOW IT WORKS SECTION
+================================ */
+
+.how-it-works {
+  padding: 50px 0;
+}
+
+/* Title */
+.how-it-works .main-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0f5132;
+  margin-bottom: 10px;
+}
+
+.how-it-works .sub-title {
+  font-size: 16px;
+  color: #6c757d;
+  letter-spacing: 1px;
+}
+
+
+/* Step Card */
+.how-it-works .col-md-4 > div {
+  padding: 20px 25px;
+  border-radius: 16px;
+  transition: all 0.4s ease;
+}
+
+.how-it-works .col-md-4 > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Step Number */
+.numround {
+  width: 36px;
+  height: 36px;
+  background: #0f5132;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Step Heading */
+.how-it-works h6 {
+  font-size: 18px;
+  color: #212529;
+  margin-top: 6px;
+}
+
+/* Step Text */
+.how-it-works p {
+  font-size: 14px;
+  color: #6c757d;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Step Image */
+.step-img {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 5px;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.how-it-works .col-md-4 > div:hover .step-img {
+  transform: scale(1.05);
+}
+
+/* Align number + heading */
+.how-it-works .d-flex {
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+
+/* ================================
+   PRODUCT INFO
+================================ */
+.product-info {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.product-info h6 {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.checked {
+  color: #ffc107;
+  font-size: 12px;
+}
+
+.prices {
+  font-size: 15px;
+}
+
+.prices .new {
+  font-weight: 600;
+  color: #005c3d;
+}
+
+.prices .old {
+  margin-left: 6px;
+  color: #999;
+}
+
+.offer-section {
+  height: 300px;
+  background-color: rgb(238, 238, 238);
+  padding: 40px 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.offer-content {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.offer-content h4 {
+  color: #005c3d;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.offer-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.offer-form input {
+  padding: 10px 15px;
+  width: 260px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.offer-form button {
+  background-color: #005c3d;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.offer-form button:hover {
+  background-color: #279576;
+}
+
+.nutrition-title {
+    color: #005c3d;
+}
+
+/* Section */
+.nutrition-section {
+    margin-top: 20px;
+}
+
+/* Card */
+.nutrition-card {
+    background: #f6fff9;
+    border-radius: 18px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 92, 61, 0.12);
+    transition: all 0.35s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Animation */
+.nutrition-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 35px rgba(0, 92, 61, 0.25);
+}
+
+.combo-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0 20px;
+  scrollbar-width: none;
+}
+
+.combo-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.combo-item {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+
+/* Tablet */
+@media (max-width: 992px) {
+  .combo-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+   .banner-image img {
+    width: 400px;
+    /* max-width: 500px; */
+    height: auto;
+}
+.title-with-line{
+  font-size: 30px !important;
+}
+.subtitle{
+  font-size: 15px !important;
+
+}
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .combo-item {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+
+  .banner-image img {
+    width: 300px;
+    /* max-width: 500px; */
+    height: auto;
+}
+.title-with-line{
+  font-size: 25px !important;
+}
+.subtitle{
+  font-size: 12px !important;
+
+}
+}
+
+/* ================================
+   ARROWS
+================================ */
+
+.combo-arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #005c3d;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+.combo-arrow:hover {
+  background: #07a16e;
+}
+
+.combo-arrow.left {
+  left: -40px;
+}
+
+.combo-arrow.right {
+  right: -40px;
+}
+
+/* ================================
+   RESPONSIVE FIXES (EXISTING)
+================================ */
+@media (max-width: 768px) {
+  .card-3d {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-info h6 {
+    font-size: 14px;
+  }
+
+  .side-icons i {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+
+/* ================================
+   CUSTOMER REVIEWS
+================================ */
+
+.customer-reviews-section {
+  text-align: center;
+}
+
+.review-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.review-subtitle {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #666;
+}
+
+/* Review Card */
+.review-card {
+  display: flex;
+  height: 100%;
+  background: #fff;
+  /* border-radius: 14px; */
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  transition: 0.3s ease;
+}
+
+.review-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Left Image */
+.review-image {
+  width: 200px;
+  min-width: 200px;
+  background: #005c3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-image img {
+  /* width: 140px; */
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Right Content */
+.review-body {
+  padding: 18px 20px;
+  text-align: left;
+}
+
+/* Stars */
+.stars {
+  color: #ffc107;
+  font-size: 14px;
+}
+
+/* Buyer */
+.buyer {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Tags */
+.tags span {
+  display: inline-block;
+  background: #f2f2f2;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+/* Review Text */
+.review-text {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Helpful */
+.helpful {
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Extra Tags */
+.extra-tags span {
+  display: inline-block;
+  border: 1px solid #005c3d;
+  color: #005c3d;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .review-card {
+    flex-direction: column;
+  }
+
+  .review-image {
+    width: 100%;
+    min-width: 100%;
+    padding: 20px 0;
+  }
+
+  .review-image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .review-body {
+    text-align: center;
+  }
+
+  .helpful {
+    justify-content: center;
+  }
+}

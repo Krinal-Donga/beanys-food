@@ -1,0 +1,227 @@
+/* ============================= */
+/* OVERLAY */
+/* ============================= */
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  z-index: 9998;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* ============================= */
+/* CART WRAPPER */
+/* ============================= */
+
+.cart-page-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 380px;
+  max-width: 100%;
+  height: 100vh;
+  background: #0c5e48;
+  color: white;
+  z-index: 9999;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+
+  /* Smooth Slide */
+  transform: translateX(100%);
+  animation: slideIn 0.4s ease forwards;
+}
+
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.cart-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-close {
+  font-size: 45px !important;
+  cursor: pointer;
+  background: none;
+  border: none;
+  top: 5px;
+  color: white !important;
+}
+
+/* ============================= */
+/* BODY */
+/* ============================= */
+
+.cart-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 20px;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.cart-footer {
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  background: #0a4f3c;
+}
+
+/* ============================= */
+/* EMPTY */
+/* ============================= */
+
+.empty-cart {
+  text-align: center;
+  margin-top: 40px;
+  opacity: 0.8;
+}
+
+/* ============================= */
+/* CART ITEM */
+/* ============================= */
+
+.cart-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #0f6b52;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  gap: 10px;
+}
+
+.cart-img img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-details {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.cart-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.current-price {
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+/* ============================= */
+/* QTY */
+/* ============================= */
+
+.qty-box {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.qty-box button {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.qty-box span {
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================= */
+/* DELETE */
+/* ============================= */
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #ff4d4d;
+  transform: scale(1.1);
+}
+
+/* ============================= */
+/* CONFIRM */
+/* ============================= */
+
+.confirm-text {
+  font-size: 14px;
+  color: #ffdede;
+  margin-bottom: 10px;
+}
+
+.confirm-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.yes-btn {
+  background: #e53935;
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.no-btn {
+  background: #9e9e9e;
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .cart-page-wrapper {
+    width: 100%;
+  }
+}

@@ -1,0 +1,454 @@
+.pd-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* TOP */
+.pd-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+/* IMAGE */
+.pd-images {
+  position: relative;
+}
+
+.pd-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ff6a00;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pd-main-img {
+  width: 100%;
+  height: 550px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.pd-thumbs {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.pd-thumbs img {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  border: 2px solid #eee;
+}
+
+/* INFO */
+.pd-info h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 30px;
+  color: #005c3d;
+}
+
+.pd-rating {
+  margin: 10px 0;
+  color: #f6a600;
+  font-size: 14px;
+}
+
+.pd-rating span {
+  color: #777;
+}
+
+.pd-price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.pd-final {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.pd-old {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.pd-off {
+  background: #ffe6d4;
+  color: #ff6a00;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* QTY */
+.pd-qty {
+  display: flex;
+  border: 1px solid #ddd;
+  width: fit-content;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pd-qty button {
+  width: 40px;
+  border: none;
+  background: #f6f6f6;
+  font-size: 18px;
+}
+
+.pd-qty span {
+  width: 40px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+/* BUTTONS */
+.pd-buttons {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.pd-buttons button {
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.pd-add {
+  background: #005c3d;
+  color: white;
+}
+
+.pd-buy {
+  background: #ffd600;
+}
+
+/* ICONS */
+.pd-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* BOTTOM */
+/* ===============================
+   WHY YOU'LL LOVE IT SECTION
+================================ */
+
+/* ===============================
+   WHY YOU'LL LOVE IT
+================================ */
+
+.pd-bottom {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px 36px;
+  max-width: 950px;
+  margin: 60px auto;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.pd-bottom h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 22px;
+}
+
+/* Feature List */
+.pd-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+}
+
+.pd-features li {
+  font-size: 17px;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.pd-trust {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  background: #f7f9f8;
+  padding: 20px;
+  border-radius: 14px;
+  margin: 10px 0 40px;
+  flex-wrap: wrap;
+}
+
+.pd-trust div {
+  font-size: 15px;
+  font-weight: 600;
+  color: #005c3d;
+}
+.pd-pack {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.pd-pack h3 {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #005c3d;
+}
+.heading{
+    font-size: 23px;
+  font-weight: bold;
+  color: #005c3d;
+}
+
+.pd-pack ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pd-pack li {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.pd-usage {
+  margin-bottom: 60px;
+}
+
+.pd-usage h3 {
+  font-size: 24px;
+  color: #005c3d;
+  margin-bottom: 20px;
+}
+
+.usage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.usage-grid div {
+  background: #f7f9f8;
+  padding: 22px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+.pd-storage {
+  background: #fffbe6;
+  padding: 26px;
+  border-radius: 16px;
+  border-left: 6px solid #ffd600;
+  margin-bottom: 60px;
+}
+
+.pd-storage h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #005c3d;
+}
+
+.pd-storage p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+.pd-sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.12);
+  z-index: 9999;
+}
+
+.pd-sticky-bar span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #005c3d;
+}
+
+
+
+/* ===============================
+   BADGES
+================================ */
+
+.pd-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.badge {
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f4f4f4;
+  color: #222;
+  white-space: nowrap;
+}
+
+/* Badge colors */
+.badge.green {
+  background: #e8f6ee;
+  color: #0b7a42;
+}
+
+.badge.red {
+  background: #fdeaea;
+  color: #c0392b;
+}
+
+.badge.yellow {
+  background: #fff5db;
+  color: #9a6b00;
+}
+
+.badge.dark {
+  background: #efefef;
+  color: #000;
+}
+
+/* ================= REVIEWS SECTION ================= */
+
+.pd-reviews-section {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.pd-reviews-section h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.review-summary {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.review-left h2 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.review-left p {
+  color: gray;
+  margin-top: 5px;
+}
+
+.review-bars {
+  flex: 1;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.bar {
+  flex: 1;
+  height: 8px;
+  background: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  background: #0f6c45;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-card {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.review-card h4 {
+  margin: 0 0 10px 0;
+}
+
+.review-card span {
+  font-size: 12px;
+  color: gray;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .pd-bottom {
+    padding: 24px 20px;
+    margin: 40px 16px;
+  }
+
+  .pd-bottom h3 {
+    font-size: 22px;
+  }
+
+  .pd-features li {
+    font-size: 16px;
+  }
+
+  .pd-badges {
+    gap: 10px;
+  }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .pd-top {
+    grid-template-columns: 1fr;
+  }
+}

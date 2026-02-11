@@ -1,0 +1,60 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+  /* Typography */
+  --font-primary: 'Poppins', sans-serif;
+  --line-height-base: 1.6;
+
+  /* Font Weights */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Brand Colors */
+  --green-dark: #0a5b3c;
+  --green-light: #0f6b49;
+
+  --accent-yellow: #f6ff00;
+
+  /* Text Colors */
+  --text-dark: #0f0f0f;
+  --text-white: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.85);
+  --text-gray: #555555;
+
+  /* Backgrounds */
+  --bg-white: #ffffff;
+  --bg-light: #f9f9f9;
+
+  /* UI */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: var(--line-height-base);
+  font-weight: var(--font-regular);
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+h1 {
+  font-weight: var(--font-bold);
+  color: var(--text-white);
+}

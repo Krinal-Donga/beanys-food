@@ -1,0 +1,144 @@
+*{
+margin: 0;
+}
+
+.footer {
+  background-color: #005c3d;
+  color: #fff;
+  padding: 60px 0 20px;
+}
+
+.footer-logo {
+  width: 120px;
+}
+
+.footer-text {
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.footer h5 {
+  margin-bottom: 15px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.footer ul li:hover {
+  text-decoration: underline;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links li a {
+  color: #ffffff;         
+  text-decoration: none;   
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-link a {
+  color: #ffffff;          
+  text-decoration: none;
+}
+
+.footer-link a li {
+  color: #ffffff;          
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+
+/* hover effect */
+.footer-links li a:hover {
+  color: #d9d9d9;          /* thoda light white */
+  text-decoration: underline;
+}
+/* Social Icons */
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #fff;
+  color: #005c3d;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Newsletter */
+.newsletter {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter input {
+  flex: 1;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  background: transparent;
+  color: #fff;
+}
+
+.newsletter button {
+  border-radius: 30px;
+  padding: 10px 20px;
+  background: yellow;
+  border: none;
+  font-weight: bold;
+}
+
+/* Footer line */
+.footer-line {
+  border-color: rgba(255, 255, 255, 0.3);
+  margin-top: 40px;
+}
+
+/* WhatsApp Floating */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .newsletter {
+    flex-direction: column;
+  }
+
+  .newsletter button {
+    width: 100%;
+  }
+}
+
