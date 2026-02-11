@@ -4,7 +4,8 @@ import "./style.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider, useDispatch, useSelector } from "react-redux";
-import { store } from "./Component/Redux/Store";
+import store from "./components/Redux/store";
+
 
 import Homepage from "./Component/HomePage/Homepage";
 import Login from "./Component/Login/Login";
