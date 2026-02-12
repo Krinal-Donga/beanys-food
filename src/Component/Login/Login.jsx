@@ -11,7 +11,7 @@ import { doc, setDoc, serverTimestamp } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 
 function Login() {
-  const [isSignUp, setIsSignUp] = useState(true)
+  const [isSignUp, setIsSignUp] = useState(false)
   const navigate = useNavigate()
 
   const passwordRegex =
@@ -117,6 +117,8 @@ function Login() {
           </div>
 
           <button className="btn-main" type="submit">Sign Up</button>
+          <p className='mt-2'>Already have an account? <span style={{color:"green"}} onClick={() => setIsSignUp(false)}>Sign In</span></p>
+
         </form>
       </div>
 
@@ -153,6 +155,7 @@ function Login() {
           </div>
 
           <button className="btn-main" type="submit">Sign In</button>
+          <p className='mt-2'>Don't have an account? <span style={{color:"green"}} onClick={() => setIsSignUp(true)}>Sign Up</span></p>
         </form>
       </div>
 
