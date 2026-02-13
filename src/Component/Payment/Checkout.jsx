@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Checkout.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../firebase";
 
@@ -21,6 +21,7 @@ function Checkout() {
     const [paymentMethod, setPaymentMethod] = useState("razorpay");
     const location = useLocation();
     const cartItems = location.state?.cartItems || [];
+    const navigate = useNavigate();
     // ================= FUNCTIONS =================
 
     // Input Change Handler
@@ -84,6 +85,8 @@ function Checkout() {
                 );
 
                 alert("Payment Successful!");
+                    localStorage.removeItem("cart");
+                      navigate("/home");
             },
  method: {
     upi: true,
