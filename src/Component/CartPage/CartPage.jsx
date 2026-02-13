@@ -23,6 +23,9 @@ function CartPage({ closeCart }) {
     return total + (item.price || 0) * (item.qty || 0);
   }, 0);
 
+  const HandleNavigate = () =>{
+    navigate("/checkout", { state: { cartItems: items } });
+  }
   const handleDeleteClick = (id) => {
     setConfirmId(id);
   };
@@ -143,6 +146,7 @@ function CartPage({ closeCart }) {
         {/* FOOTER */}
         <div className="cart-footer">
           <h5>Grand Total: ₹{Total}</h5>
+        <button className="checkout" onClick={() => HandleNavigate()}>Checkout</button>
         </div>
       </div>
     </>

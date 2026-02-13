@@ -21,6 +21,7 @@ import PrivacyPolicy from "./Component/Footer/PrivacyPolicy";
 import ReturnRefundPolicy from "./Component/Footer/ReturnRefundPolicy";
 import ShippingPolicy from "./Component/Footer/ShippingPolicy";
 import TermsConditions from "./Component/Footer/TermsConditions";
+import Checkout from "./Component/Payment/Checkout";
 
 /* 👇 APP WRAPPER */
 function AppLayout() {
@@ -43,7 +44,7 @@ function AppLayout() {
         <Route path="/return" element={<ReturnRefundPolicy />} />
         <Route path="/shiping" element={<ShippingPolicy />} />
         <Route path="/terms" element={<TermsConditions />} />
-
+<Route path="/checkout" element={<Checkout></Checkout>}></Route>
       </Routes>
 
       {/* 🔥 CART SIDEBAR */}

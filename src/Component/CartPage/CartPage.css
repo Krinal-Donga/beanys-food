@@ -105,6 +105,21 @@
   margin-top: 40px;
   opacity: 0.8;
 }
+.checkout{
+  background-color: #0a4f3c;
+  border: 1px solid black;
+  padding: 5px 15px;
+  width: 100%;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.checkout:hover{
+ border: 1px solid white;
+ text-decoration: underline;
+ 
+}
 
 /* ============================= */
 /* CART ITEM */
